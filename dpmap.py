@@ -48,7 +48,7 @@ def main():
 
     if url is not  None and not url.startswith("http"):
             url = 'http://' + url
-            headers = {'User-Agent': HEADER}
+    headers = {'User-Agent': HEADER}
 
     threadstart(url,headers,fileopen,thre,get,post,head)
 
