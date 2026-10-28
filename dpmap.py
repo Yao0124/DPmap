@@ -91,7 +91,7 @@ def send_request_head(url,headers,path):
     clean_path = path.lstrip('/')
     target_url = f'{clean_url}/{clean_path}'
     try:
-        response = requests.post(target_url,headers=headers,timeout=10,allow_redirects=False)
+        response = requests.head(target_url,headers=headers,timeout=10,allow_redirects=False)
         code = response.status_code
         code_print(target_url,code)
     except Exception as e:
